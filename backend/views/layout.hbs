@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<style>
+    @import url("https://use.typekit.net/bwg5org.css");
+    html {
+        background-color: #FEFAE0;
+        margin: 3em;
+    }
+
+    header {
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #CCD5AE;
+        padding: 1em 2em;
+        border-radius: 5px;
+
+    }
+
+    #site-title {
+        margin: 0;
+        font-size: 400%;
+        font-family: "neue-kabel", sans-serif;
+        font-weight: 400;
+    }
+
+    #site-title a {
+    text-decoration: none;
+    color: inherit;
+    }
+
+    nav {
+        font-weight: 400;
+        display: flex;
+        gap: 1em;
+        align-items: center;
+        color: #fff;
+        font-family: "sizmo", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: x-large;
+    }
+
+    nav form {
+        display: inline;
+    }
+
+    nav button {
+        background: none;
+        border: none;
+        color: inherit;
+        text-decoration: underline;
+        cursor: pointer;
+        padding: 0;
+        font: inherit;
+    }
+
+    nav a {
+        color: inherit;
+        text-decoration: underline;
+        font: inherit;
+    }
+
+
+    main {
+        font-family: "calibri", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: x-large;
+        color: #5b5b5b;;
+        padding-left: 2em;
+        padding-right: 2em;
+
+
+    }
+    main input[type="submit"] {
+        font: inherit;
+        color: inherit;
+    }
+</style>
+<header>
+        <h1 id="site-title"><a href="/">Slow Soup</a></h1>
+        <nav>
+            <a href="/create">Create Puzzle</a>
+        {{#if user}}
+            <span>Logged in as: {{user.username}}</span>
+            <form action="/logout" method="POST">
+            <button type="submit">Log Out</button>
+            </form>
+        {{else}}
+            <a href="/signup">Sign Up</a>
+            <a href="/login">Login</a>
+        {{/if}}
+        </nav>
+</header>
+
+<main>
+    {{{body}}}
+</main>
+
+</html>

@@ -1,0 +1,19 @@
+<h1>Login</h1>
+<link rel="stylesheet" href="/css/form.css">
+
+{{#if message}}
+<div class="error">{{ message }}</div>
+{{/if}}
+<form method="POST" action="login">
+	<div>
+		<label for="email">Email:</label>
+		<input type="text" name="email" value="">
+	</div>
+	<div>
+		<label for="password">Password:</label> 
+		<input type="password" name="password" value="">
+	</div>
+	<div>
+		<input type="submit" value="Login">
+	</div>
+</form>

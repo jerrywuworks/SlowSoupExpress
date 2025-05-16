@@ -1,0 +1,43 @@
+<style>
+    .hidden{
+        display: none;
+    }
+    #play-area{
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+    input {
+        font: inherit;
+    }
+    textarea{
+        border: none;
+        font: inherit;
+    }
+
+    #yes-no-warning, #wrong-solution-warning {
+        color: coral;
+    }
+</style>
+{{#if err}}
+  <h1>{{err}}</h1>
+
+{{else}}
+    <script src="/js/puzzle.js" defer ></script>
+    <h1 id="title">{{puzzle.title}}</h1>
+    <p>{{puzzle.mystery}}</p>
+    <section id="play-area">        
+        <div id="messages" class="messages">
+            <!-- messages will go here dynamically -->
+        </div>
+
+        <p id="yes-no-warning">Warning: The question you entered can not be answered with yes/no</p>
+        <p id="wrong-solution-warning">The solution you entered is not correct</p>
+
+        <form id="question-form">
+            <textarea id="question-input" required></textarea>
+            <input type="submit" id="yes-no" value="Ask">
+            <input type="submit" id="check-solution" value="Check solution">
+        </form>
+    </section>
+{{/if}}
+<script src = "/js/textarea.js" defer></script>

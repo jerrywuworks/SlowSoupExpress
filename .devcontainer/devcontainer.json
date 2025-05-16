@@ -1,0 +1,8 @@
+{
+    "updateContentCommand": "cd backend && npm install",
+    "remoteEnv": {
+        "PORT": "${PORT}",
+        "DSN": "${DSN}"
+    },
+    "postStartCommand": "cd backend && npx --yes pm2 start app.mjs"
+}

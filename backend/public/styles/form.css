@@ -1,0 +1,16 @@
+div {
+    padding-bottom: 1em;
+}
+
+input {
+    font: inherit;
+}
+
+textarea{
+    border: none;
+    font: inherit;
+}
+
+main{ 
+    padding-left: 4em;
+}

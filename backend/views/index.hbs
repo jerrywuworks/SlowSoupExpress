@@ -1,0 +1,28 @@
+<style>
+    section{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;        
+    }
+    article h2 {
+        margin-bottom: 0.2em;
+    }
+    article p {
+        margin:0;
+    }
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+</style>
+
+<section>
+    {{#each puzzles}}
+        <a href= "/puzzle/{{webTitle}}">
+            <article>
+                <h2>{{title}}</h2>
+                <p>Created by: {{authorName}}</p>
+            </article>
+        </a>
+    {{/each}}
+</section>

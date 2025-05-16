@@ -1,0 +1,28 @@
+<h1>Sign Up</h1>
+<link rel="stylesheet" href="/css/form.css">
+
+{{#if message}}
+<div class="error">{{ message }}</div>
+{{/if}}
+
+<form method="POST" action="signup">
+    <div>
+		<label for="username">User Name:</label>
+		<input type="text" name="username" value="">
+	</div>
+	<div>
+		<label for="email">Email:</label>
+		<input type="text" name="email" value="">
+	</div>
+	<div>
+		<label for="password">Password:</label> 
+		<input type="password" name="password" value="">
+	</div>
+    <div>
+		<label for="repassword">Re-enter Password:</label> 
+		<input type="password" name="repassword" value="">
+	</div>
+	<div>
+		<input type="submit" value="Sign Up">
+	</div>
+</form>
