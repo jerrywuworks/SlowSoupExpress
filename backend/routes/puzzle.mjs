@@ -20,7 +20,7 @@ playRouter.post("/puzzle/yes-no", async(req, res) => {
     const validityScore = await checkYesOrNo(req.body.question)
     console.log("validity: ", validityScore)
 
-    if (validityScore < "50") {
+    if (validityScore < 50) {
         return res.json({valid: false })
     }
     const puzzle = await Puzzle.findOne( { title: req.body.puzzleTitle });

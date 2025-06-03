@@ -44,7 +44,7 @@ function groqQuestion (role, query) {
     ],
 
     // The language model which will generate the completion.
-    model: "llama3-8b-8192",
+    model: "llama-3.3-70b-versatile",
 
     //
     // Optional parameters
