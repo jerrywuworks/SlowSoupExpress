@@ -1,4 +1,18 @@
-# Slow Soup
+# Slow Soup Express
+## About
+Early prototype of a situation-puzzle community app.
+
+- **Stack:** Express.js • Handlebars • MongoDB • Passport.js
+- **Focus:** Core puzzle submission, solution tracking, and session-based auth
+- **Status:** Archived prototype that informed a newer Next.js direction
+
+### Quick Look (GitHub Codespaces)
+
+If you’d like to browse the code without cloning locally, you can open this repo in **GitHub Codespaces**
+
+1. Click **Code ▸ Codespaces ▸ Create codespace on main**  
+   *(or the “Open in Codespaces” button if you see one)*
+2. Wait for Codespaces to finish setting up — you’ll be **automatically redirected to the demo website** once it’s ready.
 
 ## Overview
 
